@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var totalMarks=500;
+        // Accept user details
+var firstName = prompt("Enter your First Name:");
+var lastName = prompt("Enter your Last Name:");
+var email = prompt("Enter your Email:");
+var cellNo = prompt("Enter your Cell Number:");
+var birthYear = prompt("Enter your birth year:");
+// Get the current year
+var currentYear = new Date().getFullYear();
+ // Calculate age
+var age = currentYear - birthYear;
+
+// Accept subject marks
+var chemistry = parseInt(prompt("Enter Chemistry marks:"));
+var maths = parseInt(prompt("Enter Maths marks:"));
+var biology = parseInt(prompt("Enter Biology marks:"));
+var physics = parseInt(prompt("Enter Physics marks:"));
+var english = parseInt(prompt("Enter English marks:"));
+
+// Calculate total and percentage
+var totalObtainedMarks = chemistry + maths + biology + physics;
+var percentage = (totalObtainedMarks / 500) * 100;
+
+// Display results in the console
+console.log("Student Details:");
+console.log("Name:", firstName, lastName);
+console.log("Email:", email);
+console.log("Cell No:", cellNo);
+console.log("Chemistry:", chemistry);
+console.log("Maths:", maths);
+console.log("Biology:", biology);
+console.log("Physics:", physics);
+console.log("English:", english);
+console.log("Total Marks:", totalObtainedMarks, "/ 500");
+console.log("Percentage:", percentage.toFixed(2) + "%");
+
+// Display results on the webpage
+document.write("<h1><u>Student Details</u></h1>");
+document.write("<h3>Name:</strong> " + firstName + " " + lastName + "</h3>");
+document.write("<h3>Email:</strong> " + email + "</h3>");
+document.write("<h3>Cell No:</strong> " + cellNo + "</h3>");
+document.write("<h3>Your age is: " + age + " years."+ "</h3>");
+document.write("<h1><u>Marks</u></h1>");
+document.write("<h3> Marks obtained in Chemistry:</strong> "+chemistry + "</h3>");
+document.write("<h3> Marks obtained in Maths:</strong> " + maths + "</h3>");
+document.write("<h3>Marks obtained in Biology:</strong> " + biology + "</h3>");
+document.write("<h3>Marks obtained in Physics:</strong> " + physics + "</h3>");
+document.write("<h3>Marks obtained in English:</strong> " + english + "</h3>");
+document.write("<h2>Total marks : " + totalMarks + "  </h2>");
+document.write("<h2>Total obtained marks : " + totalObtainedMarks + "  </h2>");
+document.write("<h2>Percentage: " + percentage.toFixed(2) + "%</h2>");
+
+    </script>
+</body>
+</html>
